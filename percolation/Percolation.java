@@ -11,7 +11,6 @@ public class Percolation {
 
     // creates n-by-n grid, with all sites initially blocked
     public Percolation(int n) {
-
         if (n <= 0) {
             throw new IllegalArgumentException();
         }
@@ -51,7 +50,6 @@ public class Percolation {
     // unites the adjacent sites based upon a site
     private void uniteAdjacentSites(int row, int col) {
         int siteId = getId(row, col);
-
         int left = col - 1;
         int right = col + 1;
         int top = row - 1;
@@ -99,7 +97,6 @@ public class Percolation {
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
-
         if (isRangeInValid(row, col)) {
             throw new IllegalArgumentException();
         }
@@ -111,7 +108,6 @@ public class Percolation {
 
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
-
         if (isRangeInValid(row, col)) {
             throw new IllegalArgumentException();
         }
